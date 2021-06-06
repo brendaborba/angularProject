@@ -1,0 +1,42 @@
+
+.container {
+    display: grid;
+    grid-template-columns: 20% 79.5%;
+    grid-template-rows: 10% 90%;
+    gap: 10px;
+    background: url("./body-bg.jpg");
+    height: 100%; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+  }
+
+  .header {
+    background-color: #d1ae5c;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+
+  .aside-menu {
+    background-color: #444242de;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    border-top-right-radius: 10px;
+  }
+
+  .aside-content {
+    background-color: #444242de;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    border-top-left-radius: 10px;
+
+  }
+
+
+
