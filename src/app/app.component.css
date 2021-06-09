@@ -2,12 +2,11 @@
 .container {
     display: grid;
     grid-template-columns: 20% 79.5%;
-    grid-template-rows: 10% 90%;
+    grid-template-rows: 7% 93%;
     gap: 10px;
     background: url("./body-bg.jpg");
-    height: 100%; /* You must set a specified height */
     background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
+    background-repeat: repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
   }
 
