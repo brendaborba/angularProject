@@ -20,7 +20,7 @@
   }
 
   .aside-menu {
-    background-color: #444242de;
+    background-color: #444242b7;
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 2;
@@ -29,7 +29,7 @@
   }
 
   .aside-content {
-    background-color: #444242de;
+    background-color: #444242b7;
     grid-column-start: 2;
     grid-column-end: 2;
     grid-row-start: 2;

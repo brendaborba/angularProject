@@ -1,14 +1,14 @@
 <aside>
   <ul class="sidebar-items">
     <div>
-      <div class="teste">
-      <a class="list-item">
-        <a class="material-icons">calendar_today
-        </a>Agendamentos
-      </a>
-    </div>
+      <div class="menu-pai agendamentos-pai">
+        <a id="sidebar"
+           (click)="clickMenu1()"><span class="material-icons">home
+          </span>Agendamentos</a>
+      </div>
 
-      <ul class="submenu">
+      <ul id="ActiveClass1"
+          class="submenu agendamentos-sub">
         <li>
           <a routerLink="/hospedes"
              routerLinkActive="selected">
@@ -27,35 +27,29 @@
     </div>
 
     <div>
-      <a class="list-item">
-        <a class="material-icons">
-          room
-      </a>
-        Quartos
-      </a>
-      <ul class="submenu">
+      <div class="menu-pai quartos-pai">
+        <a (click)="clickMenu2()"><span class="material-icons">room</span>Quartos</a>
+      </div>
+      <ul id="ActiveClass2"
+          class="submenu quartos-sub">
         <li>
           <a routerLink="/cadastro"
              routerLinkActive="selected">
-            Cadastro
-          </a>
+            Cadastro</a>
         </li>
       </ul>
     </div>
 
     <div>
-      <a class="list-item">
-        <a class="material-icons">
-          supervised_user_circle
-        </a>
-        Usuários
-      </a>
-      <ul class="submenu">
+      <div class="menu-pai quartos-pai">
+        <a (click)="clickMenu3()"><span class="material-icons">supervised_user_circle</span>Usuários</a>
+      </div>
+      <ul id="ActiveClass3"
+          class="submenu quartos-sub">
         <li>
           <a routerLink="/cadastro-funcionarios"
              routerLinkActive="selected">
-            Cadastro de Funcionários
-          </a>
+            Cadastro de Funcionários</a>
         </li>
       </ul>
     </div>

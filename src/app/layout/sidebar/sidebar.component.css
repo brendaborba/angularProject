@@ -1,89 +1,94 @@
-
+/*------------------------todos itens do menu*/
+a {
+  text-decoration: none;
+}
 
 .sidebar-items {
-  padding-top: 30px;
-  padding-left: 0px;
+  padding-top: 20px;
+  padding-left: 10px;
   margin: 0;
 }
 
-.sidebar-items .submenu {
-  padding-bottom: 15px;
-}
+/*------------------------menus pai*/
 
-.sidebar-items .submenu li {
-  list-style-type: none;
-  padding-left: 25px;
-  padding-top: 7px;
+.menu-pai {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.95);
+  padding-left: 8px;
+  margin-bottom: 10px;
   cursor: pointer;
-
-  display: none;
 }
 
-.sidebar-items .submenu li a {
+.menu-pai:hover {
+  color: #d1ae5c;
+  -webkit-transform: scale(1.05)!important;
+  -ms-transform: scale(1.05)!important;
+  transform: scale(1.05)!important;
+}
+
+.menu-pai a {
+  /*centralizar o icone com a TAG a*/
+  display: flex;
+  align-items: center;
+}
+
+.material-icons {
+  /*centralizar o icone com a TAG a*/
+  position: relative;
+  bottom: 1.5px;
+  padding-right: 5px;
+}
+
+/*------------------------submenus */
+
+.submenu {
+  font-size: 14px;
+}
+
+.submenu li:last-child{
+  margin-bottom: 10px;
+}
+
+.submenu li {
+  list-style-type: none;
+  cursor: pointer;
+  padding-left: 14px;
+  margin-bottom: 5px;
+}
+
+.submenu li a {
   color: rgb(187, 187, 187);
 }
 
-.sidebar-items .submenu li a:hover {
-  color: orange;
-  list-style-type: none;
+.submenu li a:hover {
+  color: #d1ae5c !important;
 }
 
-.list-item {
-  position: relative;
-  justify-content: center;
-  font-size: 18px;
-  color: rgba(255, 255, 255, 0.95);
-  padding-left: 8px;
-  padding-right: 8px;
-  cursor: pointer;
+.submenu li:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
 }
-
-.list-item:hover {
-  color: orange;
-}
-
-.teste {
-  position: relative;
-  justify-content: center;
-  align-items: center;
-
-}
-
 
 .submenu li a.selected {
-  background-color: rgb(235, 132, 15);
-  color: black;
+  color: #d1ae5c !important;
 }
 
 
 
-.list-item::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 5px;
-  background-color: orange;
-  opacity: 0;
-  transform: scaleY(0);
-  transition: transform 0.2s, opacity 0.2s;
-}
-/*
-.list-item:hover::before {
-  opacity: 0.35;
-  transform: scaleY(0.5) scaleX(2);
+/*------------------------Controlar o hide e show do submenu*/
+.agendamentos-sub,
+.quartos-sub,
+.usuarios-sub
+{
+  display: none;
 }
 
-.list-item.selected {
-  color: orange;
+.agendamentos-sub.ativo,
+.quartos-sub.ativo,
+.usuarios-sub.ativo
+{
+  display:block;
 }
 
-.list-item.selected::before {
-  opacity: 1;
-  transform: scaleY(1);
-}
 
-.list-item i.material-icons {
-  margin-right: 10px;
-} */
