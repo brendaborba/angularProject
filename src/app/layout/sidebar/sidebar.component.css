@@ -1,35 +1,70 @@
+
+
+/*------------------------usuario logado*/
+
+.usuario-logado {
+  padding-top: 35px;
+  padding-left: 34px;
+}
+
+
+.foto-usuario {
+  width: 75px;
+  height: 75px;
+  border-radius: 100px;
+  background: url("foto-usuario.svg");
+  background-size: cover;
+
+  margin-left: 35px;
+}
+
+.nome-usuario {
+  font-size: 18px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgb(141, 141, 141);
+
+  /* centralizar o icone */
+  display: flex;
+}
+
 /*------------------------todos itens do menu*/
 a {
   text-decoration: none;
+  font-size: 20px;
 }
 
 .sidebar-items {
-  padding-top: 20px;
-  padding-left: 10px;
   margin: 0;
+  height: 100%;
+  margin: 10px;
+  border-radius: 15px;
+  padding-left: 0;
 }
 
 /*------------------------menus pai*/
 
 .menu-pai {
-  font-size: 20px;
+  font-size: 18px;
   color: rgba(255, 255, 255, 0.95);
-  padding-left: 8px;
   margin-bottom: 10px;
   cursor: pointer;
+  padding-left: 20px;
+   /* display: flex;
+  justify-content: center; */
 }
 
 .menu-pai:hover {
   color: #d1ae5c;
-  -webkit-transform: scale(1.05)!important;
-  -ms-transform: scale(1.05)!important;
-  transform: scale(1.05)!important;
+  -webkit-transform: scale(1.05) !important;
+  -ms-transform: scale(1.05) !important;
+  transform: scale(1.05) !important;
 }
 
 .menu-pai a {
   /*centralizar o icone com a TAG a*/
   display: flex;
-  align-items: center;
 }
 
 .material-icons {
@@ -39,13 +74,14 @@ a {
   padding-right: 5px;
 }
 
+
 /*------------------------submenus */
 
 .submenu {
   font-size: 14px;
 }
 
-.submenu li:last-child{
+.submenu li:last-child {
   margin-bottom: 10px;
 }
 
@@ -58,6 +94,7 @@ a {
 
 .submenu li a {
   color: rgb(187, 187, 187);
+  font-size: 16px;
 }
 
 .submenu li a:hover {
@@ -74,21 +111,15 @@ a {
   color: #d1ae5c !important;
 }
 
-
-
 /*------------------------Controlar o hide e show do submenu*/
 .agendamentos-sub,
 .quartos-sub,
-.usuarios-sub
-{
+.usuarios-sub {
   display: none;
 }
 
 .agendamentos-sub.ativo,
 .quartos-sub.ativo,
-.usuarios-sub.ativo
-{
-  display:block;
+.usuarios-sub.ativo {
+  display: block;
 }
-
-

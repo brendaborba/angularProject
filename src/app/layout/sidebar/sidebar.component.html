@@ -1,4 +1,14 @@
 <aside>
+
+  <div class="usuario-logado">
+    <div  class="foto-usuario">
+    </div>
+    <p class="nome-usuario"><span class="material-icons">
+      manage_accounts
+      </span> Brenda Borba</p>
+
+  </div>
+
   <ul class="sidebar-items">
     <div>
       <div class="menu-pai agendamentos-pai">
@@ -8,7 +18,7 @@
       </div>
 
       <ul id="ActiveClass1"
-          class="submenu agendamentos-sub">
+          class="submenu agendamentos-sub ativo">
         <li>
           <a routerLink="/hospedes"
              routerLinkActive="selected">
@@ -41,11 +51,11 @@
     </div>
 
     <div>
-      <div class="menu-pai quartos-pai">
+      <div class="menu-pai usuarios-pai">
         <a (click)="clickMenu3()"><span class="material-icons">supervised_user_circle</span>Usuários</a>
       </div>
       <ul id="ActiveClass3"
-          class="submenu quartos-sub">
+          class="submenu usuarios-sub">
         <li>
           <a routerLink="/cadastro-funcionarios"
              routerLinkActive="selected">

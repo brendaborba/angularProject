@@ -20,10 +20,16 @@
              (keyup)="applyFilter($event)"
              #input>
     </div>
+
+
     <span class="material-icons filtro-icon">search</span>
-    <button class="button-novo">Novo</button>
+    <button mat-raised-button
+            color="primary"
+            class="button-novo"
+            (click)="adicionarHospede(modalHospede)">Novo</button>
   </div>
 
+  <!-- tabela -->
   <div class="bg-table-e-pesquisa">
     <div class="tabela">
       <table mat-table
@@ -122,5 +128,150 @@
                      showFirstLastButtons></mat-paginator>
     </div>
   </div>
+
+
+  <!-- formulario -->
+  <ng-template #modalHospede>
+    <div mat-dialog-title>
+      <h5>{{ edit ? 'Editar Hospede' : 'Novo Hospede' }}</h5>
+    </div>
+    <div mat-dialog-content>
+      <form class=""
+            [formGroup]="hospedeForm"
+            id="hospedeForm"
+            (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+          <div class="col-md-12">
+            <mat-form-field appearance="fill"
+                            class="width-form">
+              <mat-label>Nome</mat-label>
+              <input required
+                     type="text"
+                     matInput
+                     name="nome"
+                     id="nome"
+                     formControlName="nome"
+                     [(ngModel)]="hospede.nome" />
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-md-12">
+            <mat-form-field appearance="fill"
+                            class="width-form">
+              <mat-label>Email</mat-label>
+              <input required
+                     type="text"
+                     matInput
+                     name="email"
+                     id="email"
+                     formControlName="email"
+                     [(ngModel)]="hospede.email" />
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-md-12">
+            <mat-form-field appearance="fill"
+                            class="width-form">
+              <mat-label>RG</mat-label>
+              <input required
+                     type="text"
+                     matInput
+                     name="rg"
+                     id="rg"
+                     formControlName="rg"
+                     [(ngModel)]="hospede.rg" />
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-md-12">
+            <mat-form-field appearance="fill"
+                            class="width-form">
+              <mat-label>CPF</mat-label>
+              <input required
+                     type="text"
+                     matInput
+                     name="cpf"
+                     id="cpf"
+                     formControlName="rg"
+                     [(ngModel)]="hospede.cpf" />
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-md-12">
+            <mat-form-field appearance="fill"
+                            class="width-form">
+              <mat-label>Data Nascimento</mat-label>
+              <input required
+                     type="date"
+                     matInput
+                     name="nascimento"
+                     id="nascimento"
+                     formControlName="nascimento"
+                     [(ngModel)]="hospede.dataNasc" />
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-md-12">
+            <mat-form-field appearance="fill"
+                            class="width-form">
+              <mat-label>Telefone</mat-label>
+              <input required
+                     type="text"
+                     matInput
+                     name="telefone"
+                     id="telefone"
+                     formControlName="telefone"
+                     [(ngModel)]="hospede.rg" />
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-md-12">
+            <mat-form-field appearance="fill"
+                            class="width-form">
+              <mat-label>Status</mat-label>
+              <input required
+                     type="number"
+                     matInput
+                     name="status"
+                     id="status"
+                     formControlName="status"
+                     [(ngModel)]="hospede.status" />
+            </mat-form-field>
+          </div>
+        </div>
+
+
+      </form>
+    </div>
+    <div mat-dialog-actions
+         class="position-actions">
+      <button mat-raised-button
+              class="mat-button-cancel"
+              [mat-dialog-close]="false">
+        Cancelar
+      </button>
+      <button mat-raised-button
+              class="mat-button-confirm"
+              color="primary"
+              type="submit"
+              form="hospedeForm"
+              cdkFocusInitial>
+        {{ edit ? 'Editar' : 'Salvar' }}
+      </button>
+    </div>
+  </ng-template>
 
 </section>

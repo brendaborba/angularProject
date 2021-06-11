@@ -1,0 +1,19 @@
+.mat-button-cancel{
+  color: #fff;
+  background-color: #424242;
+  margin: 5px;
+  height: 40px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mat-button-confirm{
+  margin: 5px;
+  height: 40px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

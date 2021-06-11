@@ -18,6 +18,8 @@ import { HeaderComponent } from './layout/header/header.component';
 import { AsideContentComponent } from './layout/aside-content/aside-content.component';
 import { HospedesComponent } from './layout/aside-content/agendamentos/hospedes/hospedes.component';
 import {MatIconModule} from '@angular/material/icon';
+import { DialogConfirmacaoComponent } from './layout/dialog/dialog-confirmacao/dialog-confirmacao.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import {MatIconModule} from '@angular/material/icon';
     CadastroFuncionariosComponent,
     HeaderComponent,
     AsideContentComponent,
-    HospedesComponent
+    HospedesComponent,
+    DialogConfirmacaoComponent
 
   ],
   imports: [
@@ -42,7 +45,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatSelectModule,
     MatInputModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule
 
   ],
   providers: [],
